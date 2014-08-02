@@ -1,0 +1,59 @@
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[margin=1cm]{geometry}
+
+\setlength\parskip{\medskipamount}
+\setlength\parindent{0pt}
+
+\usepackage{parallel}
+
+\usepackage{fontspec}
+\usepackage[RTLdocument]{bidi}
+\setmainfont[Script=Hebrew]{Alef}
+\newcommand{\entypo}[1]{{\fontspec{Entypo}#1}}
+
+\newcommand{\piklinio}[2]{\huge #1 & #2}
+\newcommand{\egaleco}[1]{#1=#1}
+
+\newcommand{\teksto}{%
+	\begin{tabular}{cp{0.40\linewidth}}
+		\piklinio{\egaleco{\entypo{💧}}}{אין הבדל בין דם לדם.}\\
+		\piklinio{\egaleco{\entypo{👤}}}{חיים של אדם שחי בצד אחד של הגבול לא יקרים יותר, או פחות, מאלו של מי שחי בצד השני.}\\
+		\piklinio{\egaleco{\entypo{}}}{אם לאנשים שברשימה מימין היו שמות אחרים~— יעל, איתמר, רועי או שרה~— האם לא היית קמ/ה ועוצר/ת את המלחמה?}
+	\end{tabular}
+
+	%\entypo{⚠} שמים סוף לשפיכת הדם הנקי!
+}
+
+\newcommand{\nomaro}{%
+	מחמד שעבאן, עזה, 24
+	אמג׳ד שעבאן, עזה, 30
+	ח׳דר אלבשיליקי אבו ג׳בל, עזה, 45
+	רשאד יאסין אלנסיראת,, 27
+	מחמד אימן עאשור, חאן יונס, 15
+	ריאד מחמד כוארע, חאן יונס, 50
+	בכר מחמד ג׳ודה, חאן יונס, 22
+	עמאר מחמד ג׳ודה, חאן יונס, 26
+	חסין יוסף כוארע, חאן יונס, 13
+	מחמד אברהים כוארע, חאן יונס, 55
+	מחמד חביב, עזה, 22
+	אחמד מוסא חביב, עזה, 16
+	סקר עאיש אלעג׳ורי, ג׳באליא, 22
+	אחמד נאיל מהדי, עזה, 16
+	באסם סאלם כוארע, חאן יונס, 10
+	חאפז מחמד חמד, בית חאנון, 30
+	אברהים מחמד חמד, בית חאנון, 26
+	מהדי מחמד חמד, בית חאנון, 46
+	פוזיה ח׳ליל חמד, בית חאנון, 62
+	דניל מהדי חמד, בית חאנון, 16
+	סהא חמד, בית חאנון, 25
+	סלימאן סלמאן אבו סואוין, דיר אלבלח, 22
+	סראג׳ איאד עבד אלעאל, חאן יונס, 8
+}
+
+\begin{document}
+\begin{Parallel}{0.48\textwidth}{0.48\textwidth}
+	\ParallelLText{\nomaro}
+	\ParallelRText{\teksto}
+\end{Parallel}
+\end{document}
